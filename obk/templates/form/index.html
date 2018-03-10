@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
         <div class="col-lg-8 col-md-10 mx-auto section_web  text-center">
         <div class="title ">
@@ -33,12 +34,61 @@
 <div class="col-lg-8 col-md-10 mx-auto section_web  text-center">
         <div class="title ">
                 <h1>Contacto</h1>
+                
             </div>
-            <div class="parrafo">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede 
-            </div>
+          
+              
 </div>
 
+<div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                        <div class="col-lg-12 col-md-12  text-center">
+             <h3>Obten una clase gratis</h3>
+        
+             </div>
+
+          </div>
+              <div class="modal-body">
+                        <img src="{% static 'img/cupon.jpg' %}" class="img-fluid">
+                        <div class="col-lg-12 col-md-12  text-left">
+                                        <form method="post">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                              <label for="exampleInputEmail1">Nombre:</label>
+                                              {{form.first_name}}
+                                              <label for="exampleInputEmail1">Apellidos:</label>
+                                              {{form.last_name}}
+                            
+                                              <label for="exampleInputEmail1">Email:</label>
+                                              {{form.email}}
+                            
+                                              <label for="exampleInputEmail1">Nombre de tu mascota:</label>
+                                              {{form.name_dog}}
+                            
+                                              <label for="exampleInputEmail1">Edad:</label>
+                                              {{form.year_dog}}
+                            
+                                              <label for="exampleInputEmail1">Raza:</label>
+                                              {{form.breed}}
+                                            </div>
+                                           
+                                            <div class="form-check">
+                                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                              <label class="form-check-label" for="exampleCheck1">Aviso de provacidad</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-cupon"><h4>Generar Cupon</h4></button>
+                                          </form>
+                                          </div>
+                
+         </div>
+              <div class="modal-footer">
+             <a href="#" data-dismiss="modal" class="btn btn-danger" style="width: 100%;">Cerrar</a>
+          </div>
+           </div>
+        </div>
+     </div>
 
 
 

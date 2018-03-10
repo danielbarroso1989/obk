@@ -1,3 +1,31 @@
+body{
+    background: #f3f3f3;
+}
+body,p{
+    font-family: 'Raleway', sans-serif;
+
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Coiny', cursive;
+}
 .section_web{
 margin-bottom: 4em
 }
+.form-group label,.form-group input,.form-check-label{
+    font-size: 14px
+}
+.btn-cupon {
+    background-color: #d67521;
+    border-color: #d67521;
+    width: 100%;
+    color: white;
+}
+.btn-cupon:hover {
+    background-color: #e18c43;
+    
+}
+.btn-cupon h4{
+    margin:0;
+}
+
+
