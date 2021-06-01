@@ -39,6 +39,6 @@ sendgrid==3.6.5
 sendgrid-django==4.2.0
 six==1.11.0
 typing==3.6.2
-urllib3==1.22
+urllib3==1.26.5
 webencodings==0.5.1
 whitenoise==3.3.1
